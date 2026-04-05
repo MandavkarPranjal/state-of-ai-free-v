@@ -1,0 +1,6 @@
+title: State of AI Rankings
+defaultSnapshot: april_2026
+snapshots:
+  - id: april_2026
+    label: April 2026
+    file: april_2026.yaml
