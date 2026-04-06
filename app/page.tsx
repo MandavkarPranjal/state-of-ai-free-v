@@ -186,7 +186,7 @@ export default function Home() {
         <footer className={styles.footer}>
           <p>Snapshot for this period, not a live ranking.</p>
           <a
-            href="https://github.com/davis7dotsh/state-of-ai"
+            href="https://github.com/MandavkarPranjal/state-of-ai-free-v"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
