@@ -75,6 +75,7 @@ export default function Home() {
           <h1 className={styles.hero}>
             State<br />of AI
           </h1>
+          <p className={styles.subhero}>for broke students</p>
           <div className={styles.meta}>
             <p className={styles.by}>
               by{' '}

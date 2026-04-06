@@ -59,6 +59,15 @@
   margin: 0;
 }
 
+.subhero {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #999;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.2;
+}
+
 .meta {
   margin-top: 2rem;
   max-width: 420px;
