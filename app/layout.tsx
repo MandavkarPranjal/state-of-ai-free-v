@@ -12,9 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase,
   title: "State of AI Rankings",
   description: "Editorial ranking snapshot of the best AI models, coding harnesses, and subscriptions",
+  openGraph: {
+    title: "State of AI Rankings",
+    description: "Editorial ranking snapshot of the best AI models, coding harnesses, and subscriptions",
+    images: ["/opengraph-image"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "State of AI Rankings",
+    description: "Editorial ranking snapshot of the best AI models, coding harnesses, and subscriptions",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function RootLayout({
