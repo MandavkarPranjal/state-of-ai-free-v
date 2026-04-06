@@ -193,6 +193,16 @@ export default function Home() {
           >
             GitHub
           </a>
+          <p>Inspired by {' '}
+            <a
+              href="https://ai.davis7.sh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.footerLink}
+            >
+              State of AI by Ben Davis
+            </a>
+          </p>
         </footer>
       </div>
     </div>
