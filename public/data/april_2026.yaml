@@ -128,12 +128,13 @@ harnesses:
     recommended: true
     description: |
       The tui is a tui. Idk what else to say but: it's good.
+      No massive system prompts, so low context at the start
 
       The really impressive part is the SDK. Best "agent" SDK I've tried by a lot.
     pros:
       - Fast and minimal tui
       - Incredible SDK
-      - Can use any model*
+      - Can use any model* (including opencode's models)
     cons:
       - Auth is a little weird with the tui
 
@@ -144,9 +145,10 @@ harnesses:
     tags: [cli, desktop app, sdk]
     recommended: true
     description: |
-      Still the most impressive overall tui and their desktop app has come a lot way to actually being quite solid. I just kinda like having it around for random tasks.
+      Still the most impressive overall tui and their desktop app has come a lot way to actually being quite solid. I use it for most of my task
     pros:
       - Looks and feels great to use
+      - Has free models
       - Solid desktop app
       - Excellent client/server architecture making it super extensible
     cons:
@@ -160,29 +162,13 @@ harnesses:
     tags: [desktop app]
     recommended: true
     description: |
-      Yes I'm biased, but T3 Code is really good. 90% of my work is done from here, with the only real exception being frontend stuff (typically done in Cursor, Opencode, or Pi)
+      Yes I'm biased, but T3 Code is really good.
     pros:
       - Very very fast
       - Doesn't lag and overheat my computer
       - Wraps codex and other existing harnesses so it's A) free and B) giving u the best experience for the models
     cons:
       - Currently only support codex and claude code, thus limited model selection
-
-  - id: cursor
-    name: Cursor
-    url: https://cursor.com
-    logoId: cursor
-    tags: [editor, cloud agent, desktop app, cli]
-    description: |
-      Still my default editor.
-    pros:
-      - Editor is vscode based, it's what u expect it works
-      - They have the only good cloud agents I've tried
-      - Every model is usable
-    cons:
-      - General stability of the product/platform is rough...
-      - Have to use a cursor sub for the inference
-      - Glass the new desktop ui is very early and has a ton of issues
 
   - id: codex
     name: Codex
@@ -198,6 +184,22 @@ harnesses:
     cons:
       - Desktop performance is rough
 
+  - id: cursor
+    name: Cursor
+    url: https://cursor.com
+    logoId: cursor
+    tags: [editor, cloud agent, desktop app, cli]
+    description: |
+      Only good AI editor.
+    pros:
+      - Editor is vscode based, it's what u expect it works
+      - They have the only good cloud agents I've tried
+      - Every model is usable
+    cons:
+      - General stability of the product/platform is rough...
+      - Have to use a cursor sub for the inference
+      - Glass the new desktop ui is very early and has a ton of issues
+
   - id: claude-code
     name: Claude Code
     url: https://docs.anthropic.com/en/docs/claude-code/overview
@@ -209,69 +211,69 @@ harnesses:
       - Not something I reach for
 
 subs:
-  - id: cursor-ultra
-    name: Cursor Ultra
-    url: https://cursor.com/pricing
-    logoId: cursor-ultra
-    tags: [$200, every model]
+  - id: github-copilot-student
+    name: GitHub Copilot Student
+    url: https://education.github.com/pack
+    logoId: github-copilot
+    tags: [free, major model]
     recommended: true
     description: |
-      Your $200 will get you ~$400-$500 a month in inference. Not nearly as insane of a subsidy as the major labs, but still worth having in my opinion.
+      Not nearly as insane of a subsidy as the major labs, but still worth having in my opinion for students.
 
       If you have to pick only one sub, this is the one to get.
     pros:
-      - You get a solid editor, the only good cloud agents, and a fine cli.
+      - You get most models from major labs
       - Model variety
     cons:
+      - No Flagship models for student plan
       - Inference subsidy isn't as crazy as the big labs'
 
-  - id: codex-200
-    name: OpenAI Codex
-    url: https://openai.com/codex
-    logoId: codex-200
-    tags: [$200, gpt only]
+  - id: zed-student
+    name: Zed Student
+    url: https://zed.dev/education
+    logoId: zed
+    tags: [free, major model]
     recommended: true
     description: |
-      Insane value, your $200 will get you thousands of dollars worth of GPT a month if you push it.
+      You get $10 worth of monthly usage for free and unlimited edit predictions for 1 year.
+    pros:
+      - You get a solid editor (only for adults)
+      - Real-time multiplayer collaboration
+    cons:
+      - GPT models only
 
-      If you can afford two subs, this is the other one to get. GPT models are overall the best right now, and OpenAI is super chill about letting you use the sub in other harnesses:
+  - id: codex-20
+    name: OpenAI Codex
+    url: https://openai.com/codex/
+    logoId: codex-200
+    tags: [$20, gpt only]
+    recommended: true
+    description: |
+      This is the third sub I'd get if you can spend the money. It's insane of a value than other subs, but it seems like you can pretty easily get close to ~$800-$1000 if you push it (although that could change).
 
-      - Codex
-      - T3 Code
-      - Opencode
-      - Pi
+      If you can afford subs, this is the other one to get. GPT models are overall the best right now, and OpenAI is super chill about letting you use the sub in other harnesses:
+
+      Codex
+      T3 Code
+      Opencode
+      Pi
     pros:
       - Insane value for the money
       - Harness flexibility
     cons:
       - GPT models only
 
-  - id: opencode-black
-    name: OpenCode Black
-    url: https://opencode.ai/black
-    logoId: opencode-black
-    tags: [$200, every model]
-    recommended: true
-    description: |
-      This is the third sub I'd get if you can spend the money. Not as insane of a value as the other subs, but it seems like you can pretty easily get close to $1000 if you push it (although that could change).
-
-      Best part of this one is how flexible Opencode Zen is. It's truly just an API, your sub gets you an API key. Which means it's trivial to use as the inference for agents your building, in other harnesses, etc.
-    pros:
-      - Opencode Zen is basically an API so you can use it anywhere
-    cons:
-      - Not as absurd of a value
-      - Heavily wait listed right now, you might not even be able to get it
-
-  - id: claude-max
-    name: Claude Max
+  - id: claude-pro
+    name: Claude Pro
     url: https://www.anthropic.com/pricing
-    logoId: claude-max
-    tags: [$200, claude only]
+    logoId: claude-pro
+    tags: [$20, claude only]
     description: |
-      A pretty insane value for the money if you push it hard. Your $200 will get you thousands of dollars a month in inference if you push it.
+      A pretty insane value for the money if you push it hard. Your $20 will get you ~$400-$500 a month in inference if you push it.
 
       The problem is this is the most locked down sub of them all. You can really only use it in Claude Code which is currently the weakest mainline harness
     pros:
       - Huge inference value if you hammer it
     cons:
       - Locked to Claude Code
+      - Using other harnesses can ban your account

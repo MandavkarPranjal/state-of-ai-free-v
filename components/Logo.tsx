@@ -17,7 +17,7 @@ const logos: Record<string, { light: string; dark: string }> = {
   'codex-200': { light: '/logos/codex_light.svg', dark: '/logos/codex_dark.svg' },
   't3-code': { light: '/logos/t3-dark.svg', dark: '/logos/t3-light.svg' },
   'claude-code': { light: '/logos/claude-ai-icon.svg', dark: '/logos/claude-ai-icon.svg' },
-  'claude-max': { light: '/logos/claude-ai-icon.svg', dark: '/logos/claude-ai-icon.svg' },
+  'claude-pro': { light: '/logos/claude-ai-icon.svg', dark: '/logos/claude-ai-icon.svg' },
   cursor: { light: '/logos/cursor_light.svg', dark: '/logos/cursor_dark.svg' },
   'cursor-ultra': { light: '/logos/cursor_light.svg', dark: '/logos/cursor_dark.svg' },
   opencode: { light: '/logos/opencode.svg', dark: '/logos/opencode-dark.svg' },
@@ -25,7 +25,9 @@ const logos: Record<string, { light: string; dark: string }> = {
   pi: { light: '/logos/pi_light.svg', dark: '/logos/pi_dark.svg' },
   'gemini-sub-antigravity': { light: '/logos/gemini.svg', dark: '/logos/gemini.svg' },
   'minimax-2-5': { light: '/logos/minimax-color.svg', dark: '/logos/minimax-color.svg' },
-  'qwen-3-6-plus': { light: '/logos/qwen_light.svg', dark: '/logos/qwen_dark.svg' }
+  'qwen-3-6-plus': { light: '/logos/qwen_light.svg', dark: '/logos/qwen_dark.svg' },
+  'github-copilot': { light: '/logos/github_copilot_light.svg', dark: '/logos/github_copilot_dark.svg' },
+  'zed': { light: '/logos/zed_light.svg', dark: '/logos/zed_dark.svg' }
 };
 
 export function Logo({ logoId, className = '' }: LogoProps) {
